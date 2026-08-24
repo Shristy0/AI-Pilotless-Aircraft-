@@ -1,0 +1,12 @@
+{
+  "routes": [
+    "SFO-LAX",
+    "SEA-LAS",
+    "JFK-LAX",
+    "LHR-DXB",
+    "SIN-DXB"
+  ],
+  "trials_per_route": 10,
+  "prefer_live_weather": false,
+  "output_prefix": "ablation_no_collision"
+}

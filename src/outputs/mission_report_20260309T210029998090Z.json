@@ -1,0 +1,313 @@
+{
+  "mission": {
+    "departure": "SFO",
+    "arrival": "LAX",
+    "planned_utc": "2026-03-09T21:00:29.994951+00:00",
+    "distance_nm": 293.6,
+    "scenario": "normal"
+  },
+  "data_source": {
+    "weather": "fallback-csv",
+    "airports": "datasets/airports.csv",
+    "engine_performance": "datasets/engine_performance.csv",
+    "engine_health": "datasets/cmapss_engine_health_sample.csv",
+    "traffic": "datasets/opensky_traffic_sample.csv"
+  },
+  "feature_coverage": {
+    "automatic_takeoff": true,
+    "autonomous_flight_navigation": true,
+    "automatic_landing": true,
+    "engine_failure_prediction": true,
+    "collision_avoidance": true,
+    "flight_path_management": true,
+    "atc_integration": true,
+    "weather_forecasting_adaptation": true,
+    "emergency_handling": true,
+    "human_machine_interface_and_cybersecurity": true
+  },
+  "takeoff": {
+    "approved": true,
+    "required_runway_m": 1227.5,
+    "reason": "Takeoff approved"
+  },
+  "landing": {
+    "approved": true,
+    "required_runway_m": 1085.3,
+    "reason": "Landing approved"
+  },
+  "fuel": {
+    "cruise_fuel_kg": 1746.2,
+    "reserve_fuel_kg": 1137.2,
+    "total_required_kg": 2883.4,
+    "predicted_burn_kgph": 1516.2
+  },
+  "atc_messages": [
+    "ATC PRE-CLEARANCE: SFO -> LAX",
+    "Filed route length: 293.6 NM",
+    "ATC CLEAR: no restricted-airspace conflicts detected"
+  ],
+  "collision_alerts": [],
+  "maintenance_predictions": [
+    {
+      "unit_nr": 3,
+      "failure_probability_30_cycles": 0.1158,
+      "predicted_failure_within_30": false,
+      "recommended_action": "Continue operation with standard monitoring"
+    },
+    {
+      "unit_nr": 1,
+      "failure_probability_30_cycles": 0.097,
+      "predicted_failure_within_30": false,
+      "recommended_action": "Continue operation with standard monitoring"
+    },
+    {
+      "unit_nr": 5,
+      "failure_probability_30_cycles": 0.0836,
+      "predicted_failure_within_30": false,
+      "recommended_action": "Continue operation with standard monitoring"
+    },
+    {
+      "unit_nr": 2,
+      "failure_probability_30_cycles": 0.0474,
+      "predicted_failure_within_30": false,
+      "recommended_action": "Continue operation with standard monitoring"
+    },
+    {
+      "unit_nr": 4,
+      "failure_probability_30_cycles": 0.0373,
+      "predicted_failure_within_30": false,
+      "recommended_action": "Continue operation with standard monitoring"
+    }
+  ],
+  "emergency_alerts": [
+    "No emergency triggers detected"
+  ],
+  "security_alerts": [],
+  "hmi_messages": [
+    "HMI MISSION STATUS [SFO-LAX] => GREEN",
+    "Takeoff: OK | Landing: OK",
+    "ATC conflicts: 0 | Collision risks: 0 | Cyber alerts: 0",
+    "Emergency monitor: No emergency triggers detected",
+    "Operator action: review alerts and approve autonomous continuation if all critical checks are clear."
+  ],
+  "unconventional_response": {
+    "mission_mode": "nominal",
+    "revised_distance_nm": 293.6,
+    "revised_fuel_required_kg": 2883.4,
+    "revised_fuel_margin_kg": 2516.6,
+    "diversion_airport_iata": "",
+    "activated_events": [],
+    "autonomous_actions": [
+      "No unconventional conditions triggered"
+    ]
+  },
+  "fuel_profile": [
+    {
+      "waypoint_idx": 1,
+      "distance_nm": 17.27,
+      "elapsed_min": 4.02,
+      "target_altitude_ft": 5000.0,
+      "groundspeed_kts": 258.0,
+      "segment_fuel_kg": 101.48,
+      "cumulative_fuel_kg": 101.48,
+      "remaining_fuel_kg": 5298.52
+    },
+    {
+      "waypoint_idx": 2,
+      "distance_nm": 34.54,
+      "elapsed_min": 8.03,
+      "target_altitude_ft": 9750.0,
+      "groundspeed_kts": 258.0,
+      "segment_fuel_kg": 101.48,
+      "cumulative_fuel_kg": 202.96,
+      "remaining_fuel_kg": 5197.04
+    },
+    {
+      "waypoint_idx": 3,
+      "distance_nm": 51.8,
+      "elapsed_min": 12.05,
+      "target_altitude_ft": 14500.0,
+      "groundspeed_kts": 258.0,
+      "segment_fuel_kg": 101.48,
+      "cumulative_fuel_kg": 304.44,
+      "remaining_fuel_kg": 5095.56
+    },
+    {
+      "waypoint_idx": 4,
+      "distance_nm": 69.07,
+      "elapsed_min": 16.06,
+      "target_altitude_ft": 19250.0,
+      "groundspeed_kts": 258.0,
+      "segment_fuel_kg": 101.48,
+      "cumulative_fuel_kg": 405.92,
+      "remaining_fuel_kg": 4994.08
+    },
+    {
+      "waypoint_idx": 5,
+      "distance_nm": 86.34,
+      "elapsed_min": 20.08,
+      "target_altitude_ft": 24000.0,
+      "groundspeed_kts": 258.0,
+      "segment_fuel_kg": 101.48,
+      "cumulative_fuel_kg": 507.4,
+      "remaining_fuel_kg": 4892.6
+    },
+    {
+      "waypoint_idx": 6,
+      "distance_nm": 103.61,
+      "elapsed_min": 24.09,
+      "target_altitude_ft": 24000.0,
+      "groundspeed_kts": 258.0,
+      "segment_fuel_kg": 101.48,
+      "cumulative_fuel_kg": 608.87,
+      "remaining_fuel_kg": 4791.13
+    },
+    {
+      "waypoint_idx": 7,
+      "distance_nm": 120.88,
+      "elapsed_min": 28.11,
+      "target_altitude_ft": 24000.0,
+      "groundspeed_kts": 258.0,
+      "segment_fuel_kg": 101.48,
+      "cumulative_fuel_kg": 710.35,
+      "remaining_fuel_kg": 4689.65
+    },
+    {
+      "waypoint_idx": 8,
+      "distance_nm": 138.14,
+      "elapsed_min": 32.13,
+      "target_altitude_ft": 24000.0,
+      "groundspeed_kts": 258.0,
+      "segment_fuel_kg": 101.48,
+      "cumulative_fuel_kg": 811.83,
+      "remaining_fuel_kg": 4588.17
+    },
+    {
+      "waypoint_idx": 9,
+      "distance_nm": 155.41,
+      "elapsed_min": 36.14,
+      "target_altitude_ft": 24000.0,
+      "groundspeed_kts": 258.0,
+      "segment_fuel_kg": 101.48,
+      "cumulative_fuel_kg": 913.31,
+      "remaining_fuel_kg": 4486.69
+    },
+    {
+      "waypoint_idx": 10,
+      "distance_nm": 172.68,
+      "elapsed_min": 40.26,
+      "target_altitude_ft": 24000.0,
+      "groundspeed_kts": 251.4,
+      "segment_fuel_kg": 104.14,
+      "cumulative_fuel_kg": 1017.45,
+      "remaining_fuel_kg": 4382.55
+    },
+    {
+      "waypoint_idx": 11,
+      "distance_nm": 189.95,
+      "elapsed_min": 44.38,
+      "target_altitude_ft": 24000.0,
+      "groundspeed_kts": 251.4,
+      "segment_fuel_kg": 104.14,
+      "cumulative_fuel_kg": 1121.6,
+      "remaining_fuel_kg": 4278.4
+    },
+    {
+      "waypoint_idx": 12,
+      "distance_nm": 207.21,
+      "elapsed_min": 48.51,
+      "target_altitude_ft": 24000.0,
+      "groundspeed_kts": 251.4,
+      "segment_fuel_kg": 104.14,
+      "cumulative_fuel_kg": 1225.74,
+      "remaining_fuel_kg": 4174.26
+    },
+    {
+      "waypoint_idx": 13,
+      "distance_nm": 224.48,
+      "elapsed_min": 52.63,
+      "target_altitude_ft": 24000.0,
+      "groundspeed_kts": 251.4,
+      "segment_fuel_kg": 104.14,
+      "cumulative_fuel_kg": 1329.88,
+      "remaining_fuel_kg": 4070.12
+    },
+    {
+      "waypoint_idx": 14,
+      "distance_nm": 241.75,
+      "elapsed_min": 56.75,
+      "target_altitude_ft": 22750.0,
+      "groundspeed_kts": 251.4,
+      "segment_fuel_kg": 104.14,
+      "cumulative_fuel_kg": 1434.03,
+      "remaining_fuel_kg": 3965.97
+    },
+    {
+      "waypoint_idx": 15,
+      "distance_nm": 259.02,
+      "elapsed_min": 60.87,
+      "target_altitude_ft": 16500.0,
+      "groundspeed_kts": 251.4,
+      "segment_fuel_kg": 104.14,
+      "cumulative_fuel_kg": 1538.17,
+      "remaining_fuel_kg": 3861.83
+    },
+    {
+      "waypoint_idx": 16,
+      "distance_nm": 276.29,
+      "elapsed_min": 64.99,
+      "target_altitude_ft": 10250.0,
+      "groundspeed_kts": 251.4,
+      "segment_fuel_kg": 104.14,
+      "cumulative_fuel_kg": 1642.31,
+      "remaining_fuel_kg": 3757.69
+    },
+    {
+      "waypoint_idx": 17,
+      "distance_nm": 293.55,
+      "elapsed_min": 69.11,
+      "target_altitude_ft": 4000.0,
+      "groundspeed_kts": 251.4,
+      "segment_fuel_kg": 104.14,
+      "cumulative_fuel_kg": 1746.46,
+      "remaining_fuel_kg": 3653.54
+    }
+  ],
+  "navigation_preview": [
+    {
+      "waypoint_idx": 0,
+      "target_altitude_ft": 5000.0,
+      "true_airspeed_kts": 250.0,
+      "heading_deg": 139.4,
+      "estimated_groundspeed_kts": 258.0
+    },
+    {
+      "waypoint_idx": 1,
+      "target_altitude_ft": 9750.0,
+      "true_airspeed_kts": 250.0,
+      "heading_deg": 139.3,
+      "estimated_groundspeed_kts": 258.0
+    },
+    {
+      "waypoint_idx": 2,
+      "target_altitude_ft": 14500.0,
+      "true_airspeed_kts": 250.0,
+      "heading_deg": 139.2,
+      "estimated_groundspeed_kts": 258.0
+    },
+    {
+      "waypoint_idx": 3,
+      "target_altitude_ft": 19250.0,
+      "true_airspeed_kts": 250.0,
+      "heading_deg": 139.1,
+      "estimated_groundspeed_kts": 258.0
+    },
+    {
+      "waypoint_idx": 4,
+      "target_altitude_ft": 24000.0,
+      "true_airspeed_kts": 250.0,
+      "heading_deg": 139.0,
+      "estimated_groundspeed_kts": 258.0
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+iata,name,latitude,longitude,elevation_m,runway_m
+LHR,London Heathrow Airport,51.470748,-0.459909,25.2984,3901.1352
+JFK,John F. Kennedy International Airport,40.639447,-73.779317,3.9624,4422.9528
+LAS,Harry Reid International Airport,36.083361,-115.151817,664.7688,4521.7080000000005
+LAX,Los Angeles International Airport,33.942501,-118.407997,38.1,3938.9304
+SEA,Seattle–Tacoma International Airport,47.447943,-122.310276,131.9784,3627.4248
+SFO,San Francisco International Airport,37.619806,-122.374821,3.9624,3617.976
+DXB,Dubai International Airport,25.24979,55.370992,18.8976,4447.032
+SIN,Singapore Changi Airport,1.35019,103.994003,6.7056,3999.8904

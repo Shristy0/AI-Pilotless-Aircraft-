@@ -1,0 +1,63 @@
+{
+  "timestamp_utc": "2026-03-09T21:16:58.315655+00:00",
+  "trials_total": 50,
+  "seed": 42,
+  "research_profile": "full",
+  "mission_success_rate_mean": 0.8,
+  "mission_success_rate_ci95": [
+    0.68,
+    0.9
+  ],
+  "risk_index_mean": 0.091728,
+  "risk_index_ci95": [
+    0.0418,
+    0.1445
+  ],
+  "revised_fuel_margin_mean_kg": 699.1039999999999,
+  "routes": [
+    {
+      "route": "JFK-LAX",
+      "success_rate": 0.6,
+      "risk_index_mean": 0.18154,
+      "event_count_mean": 0.4
+    },
+    {
+      "route": "LHR-DXB",
+      "success_rate": 0.8,
+      "risk_index_mean": 0.12754000000000001,
+      "event_count_mean": 0.4
+    },
+    {
+      "route": "SEA-LAS",
+      "success_rate": 0.7,
+      "risk_index_mean": 0.06447,
+      "event_count_mean": 0.6
+    },
+    {
+      "route": "SFO-LAX",
+      "success_rate": 1.0,
+      "risk_index_mean": 0.01,
+      "event_count_mean": 0.2
+    },
+    {
+      "route": "SIN-DXB",
+      "success_rate": 0.9,
+      "risk_index_mean": 0.07509,
+      "event_count_mean": 0.3
+    }
+  ],
+  "event_probabilities": {
+    "gnss_spoofing": 0.08,
+    "engine_thrust_loss": 0.06,
+    "convective_weather_burst": 0.1,
+    "atc_link_loss": 0.07,
+    "destination_runway_blocked": 0.03,
+    "cyber_intrusion_attempt": 0.06
+  },
+  "noise_model": {
+    "temp_noise_std": 1.8,
+    "wind_noise_frac": 0.12,
+    "wind_dir_noise_std": 8.0,
+    "precip_noise_std": 7.5
+  }
+}

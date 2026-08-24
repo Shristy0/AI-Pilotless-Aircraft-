@@ -1,0 +1,6 @@
+route,distance_nm,fuel_required_kg,fuel_margin_kg,atc_conflicts,collision_alerts,critical_cyber_alerts,maintenance_failure_prob,mission_success,response_ms_total,response_ms_route,response_ms_weather,response_ms_navigation,response_ms_engine,response_ms_takeoff_landing,response_ms_atc,response_ms_collision,response_ms_cyber,response_ms_maintenance_emergency,emergency_top
+SFO-LAX,293.55,2883.4,2516.6,0,0,0,0.1158,1,2.695,0.244,1.409,0.046,0.248,0.004,0.162,0.26,0.114,0.208,No emergency triggers detected
+SEA-LAS,753.11,5679.4,800.0,0,0,0,0.1158,1,1.351,0.064,0.578,0.042,0.066,0.003,0.049,0.242,0.117,0.19,No emergency triggers detected
+JFK-LAX,2145.97,14423.5,800.0,0,0,0,0.1158,1,1.371,0.061,0.611,0.043,0.072,0.003,0.054,0.244,0.096,0.187,No emergency triggers detected
+LHR-DXB,2968.39,19154.9,800.0,0,0,0,0.1158,1,1.322,0.06,0.56,0.039,0.063,0.003,0.047,0.241,0.109,0.2,No emergency triggers detected
+SIN-DXB,3156.32,19809.7,800.0,0,0,0,0.1158,1,1.384,0.064,0.604,0.041,0.067,0.003,0.05,0.249,0.106,0.198,No emergency triggers detected

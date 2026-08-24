@@ -1,0 +1,2 @@
+# Optional: Apple Silicon GPU acceleration for TensorFlow
+tensorflow-metal

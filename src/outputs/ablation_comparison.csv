@@ -1,0 +1,6 @@
+profile,success_rate,risk_index_mean,delta_success_vs_full,delta_risk_vs_full,pvalue_success_vs_full,pvalue_risk_vs_full,cliffs_delta_success,cliffs_delta_risk,effect_success,effect_risk
+full,0.8,0.091728,0.0,0.0,1.0,1.0,0.0,0.0,negligible,negligible
+no_collision,0.72,0.17131999999999997,-0.08000000000000007,0.07959199999999997,0.4806077568972411,0.1251499400239904,-0.08,0.0624,negligible,negligible
+no_contingency,0.82,0.145118,0.019999999999999907,0.05338999999999999,1.0,0.31747301079568174,0.02,-0.0232,negligible,negligible
+no_cyber,0.8,0.13105599999999998,0.0,0.039327999999999974,1.0,0.4330267892842863,0.0,-0.0464,negligible,negligible
+no_maintenance,0.76,0.14536400000000002,-0.040000000000000036,0.05363600000000002,0.8140743702518992,0.2686925229908037,-0.04,0.0528,negligible,negligible

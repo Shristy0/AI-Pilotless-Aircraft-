@@ -1,0 +1,86 @@
+{
+  "timestamp_utc": "2026-03-09T21:17:00.071682+00:00",
+  "profiles": [
+    "full",
+    "no_contingency",
+    "no_collision",
+    "no_cyber",
+    "no_maintenance"
+  ],
+  "baseline_profile": "full",
+  "trials_per_route": 10,
+  "routes": [
+    "SFO-LAX",
+    "SEA-LAS",
+    "JFK-LAX",
+    "LHR-DXB",
+    "SIN-DXB"
+  ],
+  "results": [
+    {
+      "profile": "full",
+      "success_rate": 0.8,
+      "risk_index_mean": 0.091728,
+      "delta_success_vs_full": 0.0,
+      "delta_risk_vs_full": 0.0,
+      "pvalue_success_vs_full": 1.0,
+      "pvalue_risk_vs_full": 1.0,
+      "cliffs_delta_success": 0.0,
+      "cliffs_delta_risk": 0.0,
+      "effect_success": "negligible",
+      "effect_risk": "negligible"
+    },
+    {
+      "profile": "no_contingency",
+      "success_rate": 0.82,
+      "risk_index_mean": 0.145118,
+      "delta_success_vs_full": 0.019999999999999907,
+      "delta_risk_vs_full": 0.05338999999999999,
+      "pvalue_success_vs_full": 1.0,
+      "pvalue_risk_vs_full": 0.31747301079568174,
+      "cliffs_delta_success": 0.02,
+      "cliffs_delta_risk": -0.0232,
+      "effect_success": "negligible",
+      "effect_risk": "negligible"
+    },
+    {
+      "profile": "no_collision",
+      "success_rate": 0.72,
+      "risk_index_mean": 0.17131999999999997,
+      "delta_success_vs_full": -0.08000000000000007,
+      "delta_risk_vs_full": 0.07959199999999997,
+      "pvalue_success_vs_full": 0.4806077568972411,
+      "pvalue_risk_vs_full": 0.1251499400239904,
+      "cliffs_delta_success": -0.08,
+      "cliffs_delta_risk": 0.0624,
+      "effect_success": "negligible",
+      "effect_risk": "negligible"
+    },
+    {
+      "profile": "no_cyber",
+      "success_rate": 0.8,
+      "risk_index_mean": 0.13105599999999998,
+      "delta_success_vs_full": 0.0,
+      "delta_risk_vs_full": 0.039327999999999974,
+      "pvalue_success_vs_full": 1.0,
+      "pvalue_risk_vs_full": 0.4330267892842863,
+      "cliffs_delta_success": 0.0,
+      "cliffs_delta_risk": -0.0464,
+      "effect_success": "negligible",
+      "effect_risk": "negligible"
+    },
+    {
+      "profile": "no_maintenance",
+      "success_rate": 0.76,
+      "risk_index_mean": 0.14536400000000002,
+      "delta_success_vs_full": -0.040000000000000036,
+      "delta_risk_vs_full": 0.05363600000000002,
+      "pvalue_success_vs_full": 0.8140743702518992,
+      "pvalue_risk_vs_full": 0.2686925229908037,
+      "cliffs_delta_success": -0.04,
+      "cliffs_delta_risk": 0.0528,
+      "effect_success": "negligible",
+      "effect_risk": "negligible"
+    }
+  ]
+}

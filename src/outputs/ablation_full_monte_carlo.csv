@@ -1,0 +1,51 @@
+profile,route,events,event_count,mission_mode,mission_success,risk_index,distance_nm,fuel_required_kg,revised_fuel_required_kg,revised_fuel_margin_kg,critical_collision_alerts,critical_cyber_alerts,critical_collision_truth,critical_cyber_truth,top_maintenance_prob_truth,atc_conflicts,emergency_triggered,actions
+full,SFO-LAX,none,0,nominal,1,0.0,293.55,2724.9,2724.9,2875.1,0,0,0,0,0.1158,0,0,No unconventional conditions triggered
+full,SFO-LAX,none,0,nominal,1,0.0,293.55,2594.9,2594.9,3005.1,0,0,0,0,0.1158,0,0,No unconventional conditions triggered
+full,SFO-LAX,none,0,nominal,1,0.0,293.55,2779.9,2779.9,2820.1,0,0,0,0,0.1158,0,0,No unconventional conditions triggered
+full,SFO-LAX,none,0,nominal,1,0.0,293.55,2961.4,2961.4,2638.6,0,0,0,0,0.1158,0,0,No unconventional conditions triggered
+full,SFO-LAX,none,0,nominal,1,0.0,293.55,2893.5,2893.5,2706.5,0,0,0,0,0.1158,0,0,No unconventional conditions triggered
+full,SFO-LAX,none,0,nominal,1,0.0,293.55,2717.6,2717.6,2882.4,0,0,0,0,0.1158,0,0,No unconventional conditions triggered
+full,SFO-LAX,none,0,nominal,1,0.0,293.55,2998.0,2998.0,2602.0,0,0,0,0,0.1158,0,0,No unconventional conditions triggered
+full,SFO-LAX,none,0,nominal,1,0.0,293.55,2541.6,2541.6,3058.4,0,0,0,0,0.1158,0,0,No unconventional conditions triggered
+full,SFO-LAX,convective_weather_burst,1,nominal,1,0.05,293.55,2993.3,3553.6,2046.4,0,0,0,0,0.1158,0,0,Dynamic reroute generated with storm-cell standoff
+full,SFO-LAX,destination_runway_blocked,1,divert,1,0.05,293.55,2857.9,3615.2,1984.8,0,0,0,0,0.1158,0,0,Diversion activated to LAS
+full,SEA-LAS,none,0,nominal,1,0.0,753.11,5674.3,5674.3,383.9,0,0,0,0,0.1158,0,0,No unconventional conditions triggered
+full,SEA-LAS,atc_link_loss,1,degraded,1,0.05,753.11,5004.2,5004.2,701.6,0,0,0,0,0.1158,0,0,Autonomy set to procedural hold until comms restored
+full,SEA-LAS,convective_weather_burst,1,degraded,0,0.0596,753.11,6037.6,7167.8,-48.1,0,0,0,0,0.1158,0,0,Dynamic reroute generated with storm-cell standoff | Fuel-critical procedure triggered: priority landing and emergency declaration
+full,SEA-LAS,none,0,nominal,1,0.0,753.11,5963.8,5963.8,911.6,0,0,0,0,0.1158,0,0,No unconventional conditions triggered
+full,SEA-LAS,convective_weather_burst,1,degraded,0,0.1207,753.11,5640.3,6696.2,-353.4,0,0,0,0,0.1158,0,0,Dynamic reroute generated with storm-cell standoff | Fuel-critical procedure triggered: priority landing and emergency declaration
+full,SEA-LAS,"destination_runway_blocked,cyber_intrusion_attempt",2,divert,0,0.3644,753.11,5894.8,7606.1,-1321.8,0,0,0,0,0.1158,0,0,Diversion activated to LAX | Security lockdown applied; non-essential interfaces disabled | Fuel-critical procedure triggered: priority landing and emergency declaration
+full,SEA-LAS,atc_link_loss,1,degraded,1,0.05,753.11,5645.8,5645.8,383.8,0,0,0,0,0.1158,0,0,Autonomy set to procedural hold until comms restored
+full,SEA-LAS,none,0,nominal,1,0.0,753.11,5919.4,5919.4,476.7,0,0,0,0,0.1158,0,0,No unconventional conditions triggered
+full,SEA-LAS,none,0,nominal,1,0.0,753.11,6368.2,6368.2,554.6,0,0,0,0,0.1158,0,0,No unconventional conditions triggered
+full,SEA-LAS,none,0,nominal,1,0.0,753.11,5350.5,5350.5,657.5,0,0,0,0,0.1158,0,0,No unconventional conditions triggered
+full,JFK-LAX,none,0,nominal,1,0.0,2145.97,14651.0,14651.0,940.8,0,0,0,0,0.1158,0,0,No unconventional conditions triggered
+full,JFK-LAX,none,0,nominal,1,0.0,2145.97,14029.6,14029.6,512.5,0,0,0,0,0.1158,0,0,No unconventional conditions triggered
+full,JFK-LAX,none,0,nominal,1,0.0,2145.97,13701.4,13701.4,1029.6,0,0,0,0,0.1158,0,0,No unconventional conditions triggered
+full,JFK-LAX,convective_weather_burst,1,degraded,0,0.3683,2145.97,14001.1,16622.1,-1591.6,0,0,0,0,0.1158,0,0,Dynamic reroute generated with storm-cell standoff | Fuel-critical procedure triggered: priority landing and emergency declaration
+full,JFK-LAX,convective_weather_burst,1,degraded,0,0.4802,2145.97,13762.0,16338.2,-2151.0,0,0,0,0,0.1158,0,0,Dynamic reroute generated with storm-cell standoff | Fuel-critical procedure triggered: priority landing and emergency declaration
+full,JFK-LAX,gnss_spoofing,1,nominal,0,0.45,2145.97,14877.2,15323.5,102.1,0,2,0,2,0.1158,0,0,Cyber mode hardening enabled; external nav packets isolated
+full,JFK-LAX,none,0,nominal,1,0.0,2145.97,14134.8,14134.8,734.2,0,0,0,0,0.1158,0,0,No unconventional conditions triggered
+full,JFK-LAX,none,0,nominal,1,0.0,2145.97,16284.6,16284.6,836.3,0,0,0,0,0.1158,0,0,No unconventional conditions triggered
+full,JFK-LAX,engine_thrust_loss,1,degraded,0,0.5169,2145.97,15540.8,18338.1,-2334.7,0,0,0,0,0.1158,0,0,Predictive maintenance escalated and emergency power profile enabled | Fuel-critical procedure triggered: priority landing and emergency declaration
+full,JFK-LAX,none,0,nominal,1,0.0,2145.97,15407.1,15407.1,917.1,0,0,0,0,0.1158,0,0,No unconventional conditions triggered
+full,LHR-DXB,none,0,nominal,1,0.0,2968.39,19923.1,19923.1,819.6,0,0,0,0,0.1158,0,0,No unconventional conditions triggered
+full,LHR-DXB,none,0,nominal,1,0.0,2968.39,17167.3,17167.3,849.5,0,0,0,0,0.1158,0,0,No unconventional conditions triggered
+full,LHR-DXB,none,0,nominal,1,0.0,2968.39,18188.7,18188.7,541.3,0,0,0,0,0.1158,0,0,No unconventional conditions triggered
+full,LHR-DXB,atc_link_loss,1,degraded,1,0.05,2968.39,19629.7,19629.7,1093.3,0,0,0,0,0.1158,0,0,Autonomy set to procedural hold until comms restored
+full,LHR-DXB,none,0,nominal,1,0.0,2968.39,19196.2,19196.2,635.2,0,0,0,0,0.1158,0,0,No unconventional conditions triggered
+full,LHR-DXB,none,0,nominal,1,0.0,2968.39,19800.8,19800.8,772.4,0,0,0,0,0.1158,0,0,No unconventional conditions triggered
+full,LHR-DXB,convective_weather_burst,1,degraded,0,0.7254,2968.39,21025.4,24961.4,-3377.0,0,0,0,0,0.1158,0,0,Dynamic reroute generated with storm-cell standoff | Fuel-critical procedure triggered: priority landing and emergency declaration
+full,LHR-DXB,none,0,nominal,1,0.0,2968.39,19177.3,19177.3,1064.9,0,0,0,0,0.1158,0,0,No unconventional conditions triggered
+full,LHR-DXB,atc_link_loss,1,degraded,1,0.05,2968.39,19235.2,19235.2,1052.8,0,0,0,0,0.1158,0,0,Autonomy set to procedural hold until comms restored
+full,LHR-DXB,gnss_spoofing,1,nominal,0,0.45,2968.39,17582.7,18110.2,344.6,0,2,0,2,0.1158,0,0,Cyber mode hardening enabled; external nav packets isolated
+full,SIN-DXB,none,0,nominal,1,0.0,3156.32,20271.9,20271.9,427.6,0,0,0,0,0.1158,0,0,No unconventional conditions triggered
+full,SIN-DXB,convective_weather_burst,1,degraded,0,0.6509,3156.32,19533.5,23190.2,-3004.7,0,0,0,0,0.1158,0,0,Dynamic reroute generated with storm-cell standoff | Fuel-critical procedure triggered: priority landing and emergency declaration
+full,SIN-DXB,none,0,nominal,1,0.0,3156.32,20300.5,20300.5,861.0,0,0,0,0,0.1158,0,0,No unconventional conditions triggered
+full,SIN-DXB,cyber_intrusion_attempt,1,degraded,1,0.05,3156.32,21776.6,22212.1,499.0,0,0,0,0,0.1158,0,0,Security lockdown applied; non-essential interfaces disabled
+full,SIN-DXB,none,0,nominal,1,0.0,3156.32,22217.1,22217.1,808.1,0,0,0,0,0.1158,0,0,No unconventional conditions triggered
+full,SIN-DXB,none,0,nominal,1,0.0,3156.32,17922.8,17922.8,913.5,0,0,0,0,0.1158,0,0,No unconventional conditions triggered
+full,SIN-DXB,atc_link_loss,1,degraded,1,0.05,3156.32,19381.0,19381.0,702.6,0,0,0,0,0.1158,0,0,Autonomy set to procedural hold until comms restored
+full,SIN-DXB,none,0,nominal,1,0.0,3156.32,19512.8,19512.8,758.6,0,0,0,0,0.1158,0,0,No unconventional conditions triggered
+full,SIN-DXB,none,0,nominal,1,0.0,3156.32,22725.7,22725.7,604.7,0,0,0,0,0.1158,0,0,No unconventional conditions triggered
+full,SIN-DXB,none,0,nominal,1,0.0,3156.32,19091.5,19091.5,627.1,0,0,0,0,0.1158,0,0,No unconventional conditions triggered

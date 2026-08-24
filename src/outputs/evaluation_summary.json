@@ -1,0 +1,31 @@
+{
+  "quantitative_analysis": {
+    "scenario_count": 5,
+    "mission_success_rate": 1.0,
+    "avg_response_efficiency_ms": 1.625,
+    "p95_response_efficiency_ms": 2.433,
+    "avg_fuel_margin_kg": 1143.32
+  },
+  "prediction_reliability": {
+    "rows": 35,
+    "accuracy": 0.9091,
+    "f1": 0.8571,
+    "auc": 1.0,
+    "brier": 0.0439
+  },
+  "deep_learning_metrics": {
+    "accelerator": "GPU",
+    "gpu_count": 1.0,
+    "cnn_accuracy": 0.8072,
+    "cnn_f1": 0.6667,
+    "cnn_auc": 0.9157,
+    "cnn_train_seconds": 1.43,
+    "rnn_accuracy": 1.0,
+    "rnn_f1": 1.0,
+    "rnn_auc": 1.0,
+    "rnn_train_seconds": 1.504,
+    "rl_episodes": 400,
+    "rl_avg_reward_last50": 12.924,
+    "rl_policy_stability": 0.4899
+  }
+}

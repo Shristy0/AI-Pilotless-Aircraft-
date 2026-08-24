@@ -1,0 +1,15 @@
+{
+  "accelerator": "GPU",
+  "gpu_count": 1.0,
+  "cnn_accuracy": 0.8072,
+  "cnn_f1": 0.68,
+  "cnn_auc": 0.9101,
+  "cnn_train_seconds": 1.379,
+  "rnn_accuracy": 1.0,
+  "rnn_f1": 1.0,
+  "rnn_auc": 1.0,
+  "rnn_train_seconds": 1.492,
+  "rl_episodes": 400,
+  "rl_avg_reward_last50": 12.924,
+  "rl_policy_stability": 0.4899
+}

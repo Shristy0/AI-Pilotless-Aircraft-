@@ -1,0 +1,163 @@
+{
+  "mission": {
+    "departure": "SFO",
+    "arrival": "LAX",
+    "planned_utc": "2026-03-09T19:44:39.791421+00:00",
+    "distance_nm": 293.6,
+    "scenario": "unconventional"
+  },
+  "data_source": {
+    "weather": "fallback-csv",
+    "airports": "datasets/airports.csv",
+    "engine_performance": "datasets/engine_performance.csv",
+    "engine_health": "datasets/cmapss_engine_health_sample.csv",
+    "traffic": "datasets/opensky_traffic_sample.csv"
+  },
+  "feature_coverage": {
+    "automatic_takeoff": true,
+    "autonomous_flight_navigation": true,
+    "automatic_landing": true,
+    "engine_failure_prediction": true,
+    "collision_avoidance": true,
+    "flight_path_management": true,
+    "atc_integration": true,
+    "weather_forecasting_adaptation": true,
+    "emergency_handling": true,
+    "human_machine_interface_and_cybersecurity": true
+  },
+  "takeoff": {
+    "approved": true,
+    "required_runway_m": 1227.5,
+    "reason": "Takeoff approved"
+  },
+  "landing": {
+    "approved": true,
+    "required_runway_m": 1085.3,
+    "reason": "Landing approved"
+  },
+  "fuel": {
+    "cruise_fuel_kg": 1746.2,
+    "reserve_fuel_kg": 1137.2,
+    "total_required_kg": 2883.4,
+    "predicted_burn_kgph": 1516.2
+  },
+  "atc_messages": [
+    "ATC PRE-CLEARANCE: SFO -> LAX",
+    "Filed route length: 293.6 NM",
+    "ATC CLEAR: no restricted-airspace conflicts detected"
+  ],
+  "collision_alerts": [],
+  "maintenance_predictions": [
+    {
+      "unit_nr": 3,
+      "failure_probability_30_cycles": 0.1158,
+      "predicted_failure_within_30": false,
+      "recommended_action": "Continue operation with standard monitoring"
+    },
+    {
+      "unit_nr": 1,
+      "failure_probability_30_cycles": 0.097,
+      "predicted_failure_within_30": false,
+      "recommended_action": "Continue operation with standard monitoring"
+    },
+    {
+      "unit_nr": 5,
+      "failure_probability_30_cycles": 0.0836,
+      "predicted_failure_within_30": false,
+      "recommended_action": "Continue operation with standard monitoring"
+    },
+    {
+      "unit_nr": 2,
+      "failure_probability_30_cycles": 0.0474,
+      "predicted_failure_within_30": false,
+      "recommended_action": "Continue operation with standard monitoring"
+    },
+    {
+      "unit_nr": 4,
+      "failure_probability_30_cycles": 0.0373,
+      "predicted_failure_within_30": false,
+      "recommended_action": "Continue operation with standard monitoring"
+    }
+  ],
+  "emergency_alerts": [
+    "No emergency triggers detected",
+    "Unconventional scenario mode: divert"
+  ],
+  "security_alerts": [],
+  "hmi_messages": [
+    "HMI MISSION STATUS [SFO-LAX] => GREEN",
+    "Takeoff: OK | Landing: OK",
+    "ATC conflicts: 0 | Collision risks: 0 | Cyber alerts: 0",
+    "Emergency monitor: No emergency triggers detected; Unconventional scenario mode: divert",
+    "Operator action: review alerts and approve autonomous continuation if all critical checks are clear."
+  ],
+  "unconventional_response": {
+    "mission_mode": "divert",
+    "revised_distance_nm": 337.6,
+    "revised_fuel_required_kg": 4433.2,
+    "revised_fuel_margin_kg": 966.8,
+    "diversion_airport_iata": "LAS",
+    "activated_events": [
+      {
+        "name": "GNSS spoofing attempt",
+        "severity": "high",
+        "detection_signal": "GNSS/INS position residual exceeded 0.35 NM",
+        "autonomous_reaction": "Switch to INS + vision-aided navigation and tighten heading envelope"
+      },
+      {
+        "name": "Engine thrust degradation",
+        "severity": "critical",
+        "detection_signal": "N1/EGT trend mismatch with commanded thrust",
+        "autonomous_reaction": "Reduce speed to 220 kts and descend to efficient contingency altitude"
+      },
+      {
+        "name": "Destination runway blocked",
+        "severity": "critical",
+        "detection_signal": "Runway occupancy alert at destination",
+        "autonomous_reaction": "Compute nearest suitable alternate and execute diversion plan"
+      }
+    ],
+    "autonomous_actions": [
+      "Cyber mode hardening enabled; external nav packets isolated",
+      "Predictive maintenance escalated and emergency power profile enabled",
+      "Diversion activated to LAS"
+    ]
+  },
+  "navigation_preview": [
+    {
+      "waypoint_idx": 0,
+      "target_altitude_ft": 5000.0,
+      "true_airspeed_kts": 250.0,
+      "heading_deg": 139.4,
+      "estimated_groundspeed_kts": 258.0
+    },
+    {
+      "waypoint_idx": 1,
+      "target_altitude_ft": 9750.0,
+      "true_airspeed_kts": 250.0,
+      "heading_deg": 139.3,
+      "estimated_groundspeed_kts": 258.0
+    },
+    {
+      "waypoint_idx": 2,
+      "target_altitude_ft": 14500.0,
+      "true_airspeed_kts": 250.0,
+      "heading_deg": 139.2,
+      "estimated_groundspeed_kts": 258.0
+    },
+    {
+      "waypoint_idx": 3,
+      "target_altitude_ft": 19250.0,
+      "true_airspeed_kts": 250.0,
+      "heading_deg": 139.1,
+      "estimated_groundspeed_kts": 258.0
+    },
+    {
+      "waypoint_idx": 4,
+      "target_altitude_ft": 24000.0,
+      "true_airspeed_kts": 250.0,
+      "heading_deg": 139.0,
+      "estimated_groundspeed_kts": 258.0
+    }
+  ]
+}
