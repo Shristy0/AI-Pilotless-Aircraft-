@@ -1,89 +1,169 @@
-# Pilotless Aircraft AI Project - Practical Package
+# AI Pilotless Aircraft — Autonomous Flight Research Platform
 
-## Contents
-- `src/`: runnable code (`main.py`, `evaluate_project.py`, `modules/`, `ai_training/`)
-- `src/datasets/`: datasets used by simulation and training
-- `src/outputs/`: generated mission/evaluation results
-- `requirements.txt`: Python dependencies
-- `requirements-mac-gpu.txt`: optional Apple GPU acceleration dependency
- - `requirements-optional.txt`: optional PyTorch/OpenCV/OpenAP dependencies
-- `docs/`: literature review and ethics/regulatory drafts
+> A research-oriented Python framework for evaluating AI-assisted autonomous flight, navigation, aircraft health, collision avoidance, contingency handling, and unconventional-event response.
 
-## Datasets (download/build)
-This project expects the following files under `src/datasets/`:
-- `airports.csv` (OurAirports)
-- `weather_fallback.csv` (Open-Meteo snapshot)
-- `engine_performance.csv` (OpenAP performance grid)
-- `no_fly_zones.geojson` (US Special Use Airspace, ArcGIS open data)
-- `opensky_traffic_sample.csv` (OpenSky Network snapshot)
-- `cmapss_engine_health_sample.csv` (NASA turbofan engine degradation dataset)
+## Research scope
 
-To build them automatically:
-```bash
-cd /Users/shristy/Desktop/AI_Pilotless_Aircraft
-python3 scripts/build_datasets.py
+This repository packages a reproducible simulation and evaluation workflow for pilotless-aircraft research. The project combines modular flight systems with AI training components, scenario simulation, Monte Carlo studies, ablation experiments, and publication-style reporting.
+
+### Core research areas
+
+- Autonomous navigation and route planning
+- Air-traffic awareness and collision avoidance
+- Weather-aware decision making
+- Engine health and predictive maintenance
+- Emergency and unconventional-event response
+- Cybersecurity-aware flight scenarios
+- Deep-learning and reinforcement-learning experiments
+- Monte Carlo evaluation and ablation studies
+
+## Repository structure
+
+```text
+.
+├── src/
+│   ├── main.py                    # Main simulation entry point
+│   ├── evaluate_project.py        # Project-level evaluation
+│   ├── modules/                   # Autonomous flight subsystems
+│   ├── ai_training/               # DL/RL training and baselines
+│   ├── datasets/                  # Research/sample datasets
+│   ├── simulators/                # Simulation backends
+│   ├── research/                  # Research and ablation workflows
+│   └── outputs/                   # Generated reports, metrics, and figures
+├── scripts/                       # Dataset/build utilities
+├── figures/                       # Repository figures
+├── requirements.txt               # Core dependencies
+├── requirements-optional.txt      # Optional ML/vision/simulator dependencies
+├── requirements-mac-gpu.txt       # Optional Apple GPU dependencies
+└── README.md
 ```
 
-Optional dependencies for dataset generation and extra demos:
+## Reproducible setup
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Shristy0/AI-Pilotless-Aircraft-.git
+cd AI-Pilotless-Aircraft-
+```
+
+### 2. Create a virtual environment
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+### 3. Install dependencies
+
+```bash
+python3 -m pip install --upgrade pip
+python3 -m pip install -r requirements.txt
+```
+
+Optional dependencies:
+
 ```bash
 python3 -m pip install -r requirements-optional.txt
 ```
 
-## Optional GPU setup (Mac)
+For supported Mac GPU experiments:
+
 ```bash
-cd /Users/shristy/Desktop/AI_Pilotless_Aircraft
 python3 -m pip install -r requirements-mac-gpu.txt
-python3 src/ai_training/deep_learning_suite.py
 ```
 
-`deep_learning_suite.py` now prints detected accelerator (CPU/GPU) and GPU count.
+## Quick start
 
-## Run (VS Code Terminal)
+Run the offline-weather baseline:
+
 ```bash
-cd /Users/shristy/Desktop/AI_Pilotless_Aircraft
 python3 src/main.py --offline-weather
-python3 src/ai_training/deep_learning_suite.py
+```
+
+Run project evaluation:
+
+```bash
 python3 src/evaluate_project.py
 ```
 
-Optional PyTorch/OpenCV vision demo:
+Run the deep-learning suite:
+
 ```bash
-python3 src/ai_training/vision_baseline.py
+python3 src/ai_training/deep_learning_suite.py
 ```
 
-Optional external simulators (JSBSim/FlightGear):
-```bash
-python3 src/main.py --sim-backend jsbsim
-python3 src/main.py --sim-backend flightgear
-```
+## Research experiments
 
-Example simulator config (for external launch):
-```bash
-python3 src/main.py --sim-backend flightgear --sim-config docs/sim_config_example.json --launch-sim
-```
+### Unconventional-event scenarios
 
-## Unconventional scenario demo
 ```bash
 python3 src/main.py --offline-weather --scenario unconventional
-python3 src/main.py --offline-weather --scenario unconventional --events gnss_spoofing,engine_thrust_loss,destination_runway_blocked
 ```
 
-## Research mode (more realistic)
+Example multi-event scenario:
+
 ```bash
-python3 src/research/run_research_study.py --offline-weather --trials 120 --seed 42
+python3 src/main.py --offline-weather \
+  --scenario unconventional \
+  --events gnss_spoofing,engine_thrust_loss,destination_runway_blocked
 ```
 
-This runs Monte Carlo trials with stochastic weather/sensor uncertainty and probabilistic unconventional events, then writes:
-- `src/outputs/research_monte_carlo.csv`
-- `src/outputs/research_summary.json` (includes 95% confidence intervals)
-- `src/outputs/research_metadata.json`
-- `src/outputs/research_report.md`
-- `src/outputs/research_success_by_route.png`
-- `src/outputs/research_risk_vs_fuel_margin.png`
-- `src/outputs/research_risk_by_event_count.png`
-- `src/outputs/research_risk_distribution.png`
+### Monte Carlo research study
 
-Advanced options:
+```bash
+python3 src/research/run_research_study.py \
+  --offline-weather \
+  --trials 120 \
+  --seed 42
+```
+
+The research workflow produces summary statistics, confidence intervals, Monte Carlo data, and figures under `src/outputs/`.
+
+### Ablation study
+
+```bash
+python3 src/research/run_ablation_study.py \
+  --offline-weather \
+  --trials 120 \
+  --seed 42
+```
+
+### Publication-style report
+
+```bash
+python3 src/research/generate_paper_report.py \
+  --research-prefix research \
+  --ablation-prefix ablation
+```
+
+## Datasets
+
+The project includes or expects research/sample data for:
+
+- Airport locations
+- Weather fallback data
+- Aircraft/engine performance
+- Restricted/no-fly zones
+- Air-traffic samples
+- Turbofan engine health/degradation
+
+Dataset-generation utilities are provided in `scripts/`. When redistributing or publishing results, verify the license and attribution requirements of each upstream dataset.
+
+## Reproducibility notes
+
+For comparable experiments, record:
+
+- Python version and dependency versions
+- Experiment profile/configuration
+- Random seed
+- Number of Monte Carlo trials
+- Scenario/event probabilities
+- Sensor/weather uncertainty parameters
+- Output/report prefix
+
+Example:
+
 ```bash
 python3 src/research/run_research_study.py \
   --offline-weather \
@@ -95,30 +175,42 @@ python3 src/research/run_research_study.py \
   --output-prefix research
 ```
 
-## Ablation + significance tests
-```bash
-python3 src/research/run_ablation_study.py --offline-weather --trials 120 --seed 42
-```
+## Research outputs
 
-Outputs:
-- `src/outputs/ablation_comparison.csv`
-- `src/outputs/ablation_summary.json`
-- `src/outputs/ablation_report.md`
-- `src/outputs/ablation_comparison.png`
+Key generated artifacts include:
 
-## Publication-style report
-```bash
-python3 src/research/generate_paper_report.py --research-prefix research --ablation-prefix ablation
-```
+- `research_summary.json`
+- `research_metadata.json`
+- `research_monte_carlo.csv`
+- `research_report.md`
+- risk-distribution and route-success figures
+- ablation comparison and summary files
+- evaluation metrics and scenario tables
 
-Output:
-- `src/outputs/paper_report.md`
+Generated TensorBoard logs and other machine-specific artifacts should remain untracked.
 
-## Main practical outputs
-- `src/outputs/latest_mission_report.json`
-- `src/outputs/latest_fuel_profile.csv`
-- `src/outputs/latest_mission_profile.png`
-- `src/outputs/evaluation_summary.json`
-- `src/outputs/evaluation_scenarios.csv`
-- `src/outputs/deep_learning_metrics.json`
-- `src/outputs/evaluation_plots.png`
+## Limitations and responsible use
+
+This repository is a research and simulation platform. Its outputs should **not** be interpreted as evidence that an autonomous aircraft is safe for real-world operation or as a substitute for certified avionics, flight testing, airworthiness analysis, operational approval, or regulatory compliance.
+
+Simulation assumptions, datasets, model limitations, uncertainty, and failure cases should be documented before using results in academic or engineering claims.
+
+## Suggested research workflow
+
+1. Define the research question and evaluation metric.
+2. Establish a reproducible baseline.
+3. Run controlled scenarios with fixed seeds.
+4. Compare model/system variants through ablation.
+5. Quantify uncertainty and report confidence intervals where appropriate.
+6. Inspect failure cases, not only aggregate success rates.
+7. Preserve configurations, metadata, and generated reports.
+8. Clearly distinguish simulated evidence from real-world validation.
+
+## Author
+
+**Srishti Neupane**  
+AI Pilotless Aircraft Research Project
+
+## License
+
+No open-source license has been declared yet. Until a license is added, normal copyright restrictions apply to reuse of the repository contents.
